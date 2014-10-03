@@ -13,6 +13,10 @@ module DJ54B
           control.launch unless control.running?
         }
       end
+
+      def volume
+        Integer(spotify.tell("get the sound volume"))
+      end
     end
 
     desc "Play"
@@ -36,6 +40,18 @@ module DJ54B
         name: spotify.tell("get the current track's name").strip,
         artist: spotify.tell("get the current track's artist").strip
       }
+    end
+
+    desc "Volume up"
+    get :up do
+      new_volume = [volume + 10, 100].min
+      spotify.tell("set the sound volume to #{new_volume}")
+    end
+
+    desc "Volume down"
+    get :down do
+      new_volume = [volume - 10, 0].max
+      spotify.tell("set the sound volume to #{new_volume}")
     end
   end
 end
