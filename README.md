@@ -23,6 +23,10 @@ $ curl http://localhost:9292/down
 $ curl http://localhost:9292/info
 ```
 
+## See Also
+
+- [DJ54B GUI](https://github.com/withassociates/dj54b-gui)
+
 ## With <3
 
 - [Grape](https://github.com/intridea/grape)
