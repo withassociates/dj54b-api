@@ -3,7 +3,6 @@ require 'osaka'
 
 module DJ54B
   class API < Grape::API
-    version 'v1', using: :header, vendor: 'dj54b'
     format :json
 
     helpers do
@@ -65,7 +64,6 @@ module DJ54B
     desc "Volume up"
     get :up do
       new_volume = [volume + 11, 100].min
-      $stderr.puts(new_volume)
       spotify.tell("set the sound volume to #{new_volume}")
       info
     end
