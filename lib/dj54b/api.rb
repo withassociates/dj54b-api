@@ -23,7 +23,7 @@ module DJ54B
       def info
         {
           track: {
-            url: spotify.tell("get the current track's spotify url").strip,
+            id: spotify.tell("get the current track's id").strip,
             name: spotify.tell("get the current track's name").strip,
             artist: spotify.tell("get the current track's artist").strip,
           },
