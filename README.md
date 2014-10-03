@@ -22,3 +22,9 @@ $ curl http://localhost:9292/up
 $ curl http://localhost:9292/down
 $ curl http://localhost:9292/info
 ```
+
+## With <3
+
+- [Grape](https://github.com/intridea/grape)
+- [Osaka](https://github.com/basvodde/osaka)
+- [Spotify](http://www.spotify.com/)
