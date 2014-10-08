@@ -1,5 +1,5 @@
+require 'dj54b/spotify'
 require 'grape'
-require 'osaka'
 
 module DJ54B
   class API < Grape::API
@@ -7,9 +7,7 @@ module DJ54B
 
     helpers do
       def spotify
-        @spotify ||= Osaka::RemoteControl.new('Spotify').tap { |control|
-          control.launch unless control.running?
-        }
+        DJ54B.spotify
       end
 
       def volume
