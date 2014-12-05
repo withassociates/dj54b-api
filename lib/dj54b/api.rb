@@ -61,14 +61,14 @@ module DJ54B
 
     desc "Volume up"
     get :up do
-      new_volume = [volume + 11, 100].min
+      new_volume = [volume + 6, 100].min
       spotify.tell("set the sound volume to #{new_volume}")
       info
     end
 
     desc "Volume down"
     get :down do
-      new_volume = [volume - 9, 0].max
+      new_volume = [volume - 4, 0].max
       spotify.tell("set the sound volume to #{new_volume}")
       info
     end
