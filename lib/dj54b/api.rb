@@ -20,13 +20,13 @@ module DJ54B
 
       def info
         {
-          track: {
-            id: spotify.tell("get the current track's id").strip,
-            name: spotify.tell("get the current track's name").strip,
-            artist: spotify.tell("get the current track's artist").strip,
+          :track => {
+            :id => spotify.tell("get the current track's id").strip,
+            :name => spotify.tell("get the current track's name").strip,
+            :artist => spotify.tell("get the current track's artist").strip,
           },
-          volume: volume,
-          state: state
+          :volume => volume,
+          :state => state
         }
       end
     end
